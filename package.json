@@ -1,0 +1,62 @@
+{
+  "name": "sql-named-params",
+  "version": "1.0.0",
+  "description": "Convert SQL named parameters to placeholders and values.",
+  "keywords": [
+    "sql",
+    "named",
+    "params",
+    "parameters",
+    "placeholders"
+  ],
+  "author": {
+    "name": "Justin Lettau",
+    "email": "me@justinlettau.com",
+    "url": "https://justinlettau.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/justinlettau/sql-named-params",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justinlettau/sql-named-params"
+  },
+  "bugs": {
+    "url": "https://github.com/justinlettau/sql-named-params/issues"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint . --ext .js,.ts",
+    "test": "jest",
+    "prebuild": "del-cli dist",
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build",
+    "release": "standard-version",
+    "format": "prettier --write ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@justinlettau/renovate-config": "^0.1.2",
+    "@types/jest": "^25.2.3",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint": "^7.1.0",
+    "@typescript-eslint/parser": "^3.0.2",
+    "@typescript-eslint/eslint-plugin": "^3.0.2",
+    "del-cli": "^3.0.1",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.1.0",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "standard-version": "^8.0.0",
+    "typescript": "^3.9.3"
+  }
+}
